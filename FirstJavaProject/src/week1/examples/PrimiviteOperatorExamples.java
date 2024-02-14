@@ -42,6 +42,7 @@ public class PrimiviteOperatorExamples {
 		
 		System.out.println(number%10);//3
 		System.out.println(number/10);//12
+		System.out.println();
 		
 
 	}
