@@ -5,12 +5,47 @@ import java.util.Scanner;
 public class Week2Lab {
 
 	public static void main(String[] args) {
-		//question1();
-		//question2();
-		//question3();
-		//question4();
-		//question5();
-		question6();
+		//Uncomment which question you want to run
+		// question1();
+		// question2();
+		// question3();
+		// question4();
+		// question5();
+		// question6();
+		//question7();
+		question8();
+
+	}
+
+	public static void question8() {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter a positive integer:");
+		int n = input.nextInt();
+		double sum=0;
+		//The numerator or denominator must decimal. Otherwise, the result will be an integer.
+		for (int i = 1; i <=n; i++) {
+			sum+=1.0/(i*(i+1));
+		}
+		System.out.println("Sum:"+sum);
+
+	}
+
+	public static void question7() {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter grade:");
+		int grade = input.nextInt();
+		String letterGrade;
+		if (grade >= 85)
+			letterGrade = "A";
+		else if (grade >= 70)
+			letterGrade = "B";
+		else if (grade >= 55)
+			letterGrade = "C";
+		else if (grade >= 40)
+			letterGrade = "D";
+		else
+			letterGrade = "F";
+		System.out.println("Letter Grade:" + letterGrade);
 
 	}
 
@@ -47,9 +82,10 @@ public class Week2Lab {
 		}
 
 	}
+
 	public static void question6() {
-		String name="OZYEGIN";
-		for(int i=name.length()-1;i>=0;i--) {
+		String name = "OZYEGIN";
+		for (int i = name.length() - 1; i >= 0; i--) {
 			System.out.print(name.charAt(i));
 		}
 	}
@@ -93,22 +129,24 @@ public class Week2Lab {
 		 * 
 		 */
 	}
-	//Solution Owner: Batuhan Ozcan
+
+	// Solution Owner: Batuhan Ozcan
 	public static void question4() {
-		Scanner input=new Scanner(System.in);
-		double sum=0;
-		int count=0;
-		while (sum<100) {
+		Scanner input = new Scanner(System.in);
+		double sum = 0;
+		int count = 0;
+		while (sum < 100) {
 			System.out.println("Please enter a number: ");
-			double number= input.nextDouble();
+			double number = input.nextDouble();
 			sum += number;
-			count= count+1;
+			count = count + 1;
 		}
-		double average= sum/count;
-		System.out.println("Number count: "+ count+ " "+ "Average: "+ average);
+		double average = sum / count;
+		System.out.println("Number count: " + count + " " + "Average: " + average);
 	}
+
 	public static void question5() {
-		for(int i=100;i<=200;i+=8) {
+		for (int i = 100; i <= 200; i += 8) {
 			System.out.println(i);
 		}
 	}
