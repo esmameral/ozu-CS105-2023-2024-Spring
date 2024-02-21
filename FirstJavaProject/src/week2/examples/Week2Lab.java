@@ -8,12 +8,14 @@ public class Week2Lab {
 		//question1();
 		//question2();
 		//question3();
-		question4();
+		//question4();
+		//question5();
+		question6();
 
 	}
 
 	// Solution Owner: Sarp Karakaya
-	private static void question3() {
+	public static void question3() {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Please enter the first number:");
 		double number1 = input.nextDouble();
@@ -26,28 +28,30 @@ public class Week2Lab {
 		switch (action) {
 		case 1:
 			double addition = number1 + number2;
-			System.out.println("Addition=" + addition);
 			System.out.println(number1 + "+" + number2 + "=" + addition);
 			break;
 		case 2:
 			double subtraction = number1 - number2;
-			System.out.println("Subtraction=" + subtraction);
 			System.out.println(number1 + "-" + number2 + "=" + subtraction);
 			break;
 		case 3:
 			double multiplication = number1 * number2;
-			System.out.println("Multiplication=" + multiplication);
 			System.out.println(number1 + "x" + number2 + "=" + multiplication);
 			break;
 		case 4:
 			double division = number1 / number2;
-			System.out.println("Division=" + division);
 			System.out.println(number1 + "/" + number2 + "=" + division);
 			break;
 		default:
 			System.out.println("Invalid Selection!");
 		}
 
+	}
+	public static void question6() {
+		String name="OZYEGIN";
+		for(int i=name.length()-1;i>=0;i--) {
+			System.out.print(name.charAt(i));
+		}
 	}
 
 	// Solution Owner: Arda Eryiğit
@@ -103,5 +107,9 @@ public class Week2Lab {
 		double average= sum/count;
 		System.out.println("Number count: "+ count+ " "+ "Average: "+ average);
 	}
-
+	public static void question5() {
+		for(int i=100;i<=200;i+=8) {
+			System.out.println(i);
+		}
+	}
 }
