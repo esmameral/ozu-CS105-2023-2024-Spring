@@ -11,13 +11,13 @@ public class RandomNumbersAndArrays {
 		int counter = 0;
 		for (int i = 0; i < 100; i++) {
 			numbers[i] = (int) (Math.random() * 90) + 10;
-			if (numbers[i] > 50)
+			if (numbers[i] < 50)
 				counter++;
 		}
 		int[] newArray = new int[counter];
 		int j = 0;
 		for (int i = 0; i < 100; i++) {
-			if (numbers[i] > 50) {
+			if (numbers[i] < 50) {
 				newArray[j] = numbers[i];
 				j++;
 			}
