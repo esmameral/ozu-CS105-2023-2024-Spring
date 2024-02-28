@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class Week3Examples {
 
 	public static void main(String[] args) {
-		//question2();
-		question3();
+		// question2();
+		// question3();
+		question4();
 
 	}
 
@@ -28,13 +29,14 @@ public class Week3Examples {
 	public static void question1() {
 
 	}
-	//Solution By: Ata Tan Dagidir
+
+	// Solution By: Ata Tan Dagidir
 	public static void question3() {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Give me size");
 		int size = input.nextInt();
-		int[] myArray= new int[size];
-		int newSize = 0;//divisible by 5
+		int[] myArray = new int[size];
+		int newSize = 0;// divisible by 5
 		for (int i = 0; i < size; i++) {
 			System.out.println("Give me the " + (i + 1) + "th Number");
 			myArray[i] = input.nextInt();
@@ -42,7 +44,7 @@ public class Week3Examples {
 				newSize += 1;
 			}
 		}
-		int[] elements=new int[newSize];
+		int[] elements = new int[newSize];
 		int s = 0;
 		for (int number : myArray) {
 			if (number % 5 == 0) {
@@ -56,10 +58,22 @@ public class Week3Examples {
 		}
 	}
 
+	//Solution from: Elena Kudret
 	public static void question4() {
-
+		int[] numbers = { 1, 5,72 };
+		boolean even = false;
+		for (int i = 0; i < numbers.length; i++) {
+			if (numbers[i] % 2 == 0) {
+				System.out.println("The array contains an even integer");
+				even = true;
+				break;
+			}
+		}
+		if (!even) {
+			System.out.println("No even integers in the array");
+		}
 	}
-
+	
 	public static void question5() {
 
 	}
