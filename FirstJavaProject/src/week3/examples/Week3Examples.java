@@ -6,14 +6,15 @@ import java.util.Scanner;
 public class Week3Examples {
 
 	public static void main(String[] args) {
-		//question1();
+		// question1();
 		// question2();
 		// question3();
 		// question4();
-		 
+
 		// question5();
 		// question6();
-		question8();
+		question7();
+		//question8();
 
 	}
 
@@ -33,12 +34,12 @@ public class Week3Examples {
 	}
 
 	public static void question1() {
-		for (int i = 5; i >=1; i--) {
-			for(int j=1;j<=5-i;j++) {
+		for (int i = 5; i >= 1; i--) {
+			for (int j = 1; j <= 5 - i; j++) {
 				System.out.print(" ");
 			}
-			
-			for(int j=1;j<=i;j++) {
+
+			for (int j = 1; j <= i; j++) {
 				System.out.print("X");
 			}
 			System.out.println();
@@ -144,27 +145,46 @@ public class Week3Examples {
 		}
 	}
 
+	//Solution from: Ata Tan Dagidir
 	public static void question7() {
+		double[][] matrix = { { 0.15, 0.875, 0.375 }, { 0.55, 0.005, 0.225 }, { 0.30, 0.12, 0.4 } };
+		double sum = 0.0;
+		boolean isMarkovMatrix = true;
+		for (int i = 0; i < matrix[0].length; i++) {
+			sum = 0.0;
+			for (int j = 0; j < matrix.length; j++) {
+				sum += matrix[j][i];
+			}
 
+			if (sum != 1) {
+				System.out.println("It's not a Markov Matrix! The " + (i + 1)
+						+ "th column does not equal to 1, it equals to " + sum);
+				isMarkovMatrix = false;
+				break;
+			}
+		}
+		if (isMarkovMatrix) {
+			System.out.println("It is a markov Matrix.");
+		}
 	}
 
 	public static void question8() {
-		int[] arr={2,3,5,12,22,31,0} ;
-		boolean dublicateExists=false;
+		int[] arr = { 2, 3, 5, 12, 22, 31, 0 };
+		boolean dublicateExists = false;
 		for (int i = 0; i < arr.length; i++) {
-			for (int j = i+1; j < arr.length; j++) {
-				if(arr[i]==arr[j]) {
-					
-					dublicateExists=true;
+			for (int j = i + 1; j < arr.length; j++) {
+				if (arr[i] == arr[j]) {
+
+					dublicateExists = true;
 					break;
 				}
 			}
 		}
-		if(dublicateExists)
+		if (dublicateExists)
 			System.out.println("There are duplicate elements");
 		else
 			System.out.println("There are no duplicate elements");
-		
+
 	}
 
 }
