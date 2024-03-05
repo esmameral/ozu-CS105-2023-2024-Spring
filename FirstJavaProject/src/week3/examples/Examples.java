@@ -1,10 +1,12 @@
 package week3.examples;
 
+
 public class Examples {
 	public static void main(String[] args) {
 		//arrayExample1();
 		//arrayExample2();
 		multiDimArray();
+		
 
 	}
 	
