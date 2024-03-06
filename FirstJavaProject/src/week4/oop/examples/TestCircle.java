@@ -18,6 +18,12 @@ public class TestCircle {
 		Circle circ2=new Circle(20,3.1415);
 		circ2.printInfo();
 		
+		System.out.println("CREATE RANDOM CIRCLES");
+		for (int i = 1; i <= 5; i++) {
+			Circle circle=new Circle((int)(Math.random()*20));
+			circle.printInfo();
+			
+		}
 		
 		
 		
