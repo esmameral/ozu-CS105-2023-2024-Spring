@@ -10,8 +10,6 @@ public class Circle{
 		this.radius=radius;
 		calculateArea();
 	}
-
-	
 	
 //	 public boolean equals(Object obj) {
 //		 if(obj==null)
