@@ -5,6 +5,8 @@ public class QuadraticEquation {
 	private double b;
 	private double c;
 
+	
+	
 	public QuadraticEquation(double a, double b, double c) {
 		this.a = a;
 		this.b = b;
@@ -42,6 +44,8 @@ public class QuadraticEquation {
 		else
 			return 0;
 	}
+
+	
 
 	public void print() {
 		if (getDiscriminant() < 0) {
