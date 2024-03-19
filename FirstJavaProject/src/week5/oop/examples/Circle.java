@@ -5,10 +5,12 @@ import java.util.Objects;
 public class Circle{
 	private double radius;
 	private double area;
+	private static int numberOfObjects=0;
 	
 	public Circle(double radius) {
 		this.radius=radius;
 		calculateArea();
+		numberOfObjects++;
 	}
 	
 //	 public boolean equals(Object obj) {
@@ -72,6 +74,10 @@ public class Circle{
 	
 	private void calculateArea() {
 		area=Math.PI*radius*radius;
+	}
+
+	public static int getNumberOfObjects() {
+		return numberOfObjects;
 	}
 	
 	
