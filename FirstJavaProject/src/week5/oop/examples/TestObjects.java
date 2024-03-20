@@ -5,6 +5,8 @@ public class TestObjects {
 	public static void main(String[] args) {
 		createCircleObject();
 		//objectEqualOperator();
+		
+		
 	}
 
 	public static void objectEqualOperator() {
