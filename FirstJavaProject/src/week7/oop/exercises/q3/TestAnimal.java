@@ -1,0 +1,15 @@
+package week7.oop.exercises.q3;
+
+public class TestAnimal {
+
+	public static void main(String[] args) {
+		Cat cat = new Cat(false, "milk", 4, "black");
+		System.out.println("Cat is Vegetarian?" + cat.isVegetarian());
+		System.out.println("Cat eats " + cat.getEats());
+		System.out.println("Cat has " + cat.getNoOfLegs() + " legs.");
+		System.out.println("Cat color is " + cat.getColor());
+
+
+	}
+
+}
