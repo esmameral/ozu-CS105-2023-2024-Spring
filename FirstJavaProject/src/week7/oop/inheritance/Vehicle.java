@@ -1,11 +1,15 @@
 package week7.oop.inheritance;
 
 public  class Vehicle {
-	private String plateNumber;
+	private String plateNumber="34EEE56";
 	
 	public Vehicle() {
 		super();
 		System.out.println("I am in Vehicle cons");
+	}
+	
+	public String getName() {
+		return "Kara Şimşek";
 	}
 	
 	public String getColor() {
