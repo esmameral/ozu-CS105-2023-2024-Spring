@@ -1,11 +1,14 @@
 package com.ozu.test;
 
 import com.ozu.model.BankAccount;
+import com.ozu.model.DepositTransaction;
+import com.ozu.model.Transaction;
 
 public class TestBankAccount {
 
 	public static void main(String[] args) {
 		
+		Transaction trx=new DepositTransaction();
 		
 		BankAccount aBankAccount = new BankAccount();
 		aBankAccount.setOwner("Sarp");
