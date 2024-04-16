@@ -7,8 +7,7 @@ import com.ozu.model.Transaction;
 public class TestBankAccount {
 
 	public static void main(String[] args) {
-		
-		Transaction trx=new DepositTransaction();
+	
 		
 		BankAccount aBankAccount = new BankAccount();
 		aBankAccount.setOwner("Sarp");

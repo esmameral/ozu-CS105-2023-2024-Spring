@@ -7,6 +7,9 @@ public class Honda extends Car {
 //		System.out.println("I am in Honda cons");
 //	}
 	
+	public void aaa() {
+		System.out.println("aaa");
+	}
 	public Honda() {
 		super(7);
 	}
@@ -27,6 +30,11 @@ public class Honda extends Car {
 	@Override
 	public String getPlateNumber() {
 		return super.getPlateNumber()+ " I am a Honda";
+	}
+	@Override
+	public String getName() {
+		
+		return "Adonis..";
 	}
 
 	

@@ -8,6 +8,11 @@ public abstract class Transaction {
 	private double amount;
 	
 	
+	public Transaction(double amount) {
+		super();
+		this.amount = amount;
+	}
+
 	public abstract void updateAccount(BankAccount acc) ;
 	
 	public Date getTransactionDate() {
