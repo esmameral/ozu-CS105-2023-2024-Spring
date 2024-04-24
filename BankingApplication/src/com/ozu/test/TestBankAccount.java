@@ -8,7 +8,6 @@ public class TestBankAccount {
 
 	public static void main(String[] args) {
 	
-		
 		BankAccount aBankAccount = new BankAccount();
 		aBankAccount.setOwner("Sarp");
 		aBankAccount.getOwner();

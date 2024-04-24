@@ -14,6 +14,20 @@ public class BankAccount {
 		//System.out.println(toString());//toString() is an instance method
 	}
 	
+	public void increaseBalance(double amount) { 
+		//balance=balance+amount;
+		balance+=amount;
+	}
+	public void descreaseBalance(double amount)throws InsufficientBalanceException { 
+		//balance=balance-amount;
+		if(balance>=amount)
+			balance-=amount;
+		else {
+			throw new InsufficientBalanceException("Your balance is unsufficient. You can withdraw max "+balance);
+		}
+			
+	}
+
 	public void sayHello() {
 		currencyRate=33;
 		System.out.println("Hello from instance method");
@@ -52,7 +66,7 @@ public class BankAccount {
 	
 	
 	public String toString() {
-		return "owner:"+owner+ " account number:"+accountNumber+" balance:"+balance;
+		return owner+ "'s "+balance+ " "+getClass().getSimpleName();
 	}
 	public static double getCurrencyRate() {
 		return currencyRate;
