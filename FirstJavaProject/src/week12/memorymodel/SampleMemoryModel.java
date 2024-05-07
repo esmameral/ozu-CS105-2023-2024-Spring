@@ -1,4 +1,4 @@
-package memorymodel;
+package week12.memorymodel;
 
 public class SampleMemoryModel {
 	private static final int FIXED_INCREMENT_IN_PERCENT = 2;

@@ -1,4 +1,4 @@
-package memorymodel;
+package week12.memorymodel;
 
 public class Person {
     private int age;
