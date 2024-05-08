@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Product implements Comparable<Product>{
 	private int id ;
 	private String name;
@@ -57,6 +59,21 @@ public class Product implements Comparable<Product>{
 			return 1;
 		else
 			return 0;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Product other = (Product) obj;
+		return id == other.id;
 	}
 
 }
