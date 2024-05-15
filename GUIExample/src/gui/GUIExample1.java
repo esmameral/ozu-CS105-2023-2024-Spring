@@ -5,9 +5,9 @@ import java.awt.HeadlessException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class MyTodoApp extends JFrame {
+public class GUIExample1 extends JFrame {
 
-	public MyTodoApp() throws HeadlessException {
+	public GUIExample1() throws HeadlessException {
 		JButton b1 = new JButton("First");// creating instance of JButton
 		
 		b1.setBounds(130, 100, 100, 40);// x axis, y axis, width, height
@@ -27,7 +27,7 @@ public class MyTodoApp extends JFrame {
 
 	}
 	public static void main(String[] args) {
-		new MyTodoApp();
+		new GUIExample1();
 	}
 	
 	

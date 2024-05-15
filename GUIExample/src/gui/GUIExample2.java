@@ -5,7 +5,7 @@ import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class TodoApplication {
+public class GUIExample2 {
 
 	public static void main(String[] args) {
 		JFrame f=new JFrame("Todo Application");
