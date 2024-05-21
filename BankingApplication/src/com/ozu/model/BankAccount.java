@@ -1,11 +1,18 @@
 package com.ozu.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BankAccount {
 	private  static double currencyRate=31;
 	private String owner;
 	private double balance;
 	private int accountNumber;
-	private Transaction[] transactions=new Transaction[20];
+	private String phoneNumber;
+	private String email;
+	
+	//private Transaction[] transactions=new Transaction[20];
+	private ArrayList<Transaction> transactions=new ArrayList<Transaction>();
 	
 	public static void printInfo() {
 		currencyRate=32;
@@ -14,6 +21,25 @@ public class BankAccount {
 		//System.out.println(toString());//toString() is an instance method
 	}
 	
+
+	public List<Transaction> allTransactionsLargerThan(double x) {
+		ArrayList<Transaction> list=new ArrayList<Transaction>();
+		for (Transaction transaction : transactions) {
+			if(transaction.getAmount()>x)
+				list.add(transaction);
+		}
+		
+		return list;
+	}
+	
+	public double averageTransactionAmount( ) {
+		double sum=0;
+		for (Transaction transaction : transactions) {
+			sum+=transaction.getAmount();
+		}
+		return sum/transactions.size();
+	}
+
 	public void increaseBalance(double amount) { 
 		//balance=balance+amount;
 		balance+=amount;
@@ -74,6 +100,43 @@ public class BankAccount {
 	public static void setCurrencyRate(double currencyRate) {
 		BankAccount.currencyRate = currencyRate;
 	}
+
+	public void post(BankAccountUpdater change) throws InsufficientBalanceException {
+		change.updateAccount(this);
+		if(change instanceof Transaction)
+			transactions.add((Transaction)change);
+	}
+		
+		
+
+	public ArrayList<Transaction> getTransactions() {
+		return transactions;
+	}
+
+	public void setTransactions(ArrayList<Transaction> transactions) {
+		this.transactions = transactions;
+	}
+
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
 	
 	
 }

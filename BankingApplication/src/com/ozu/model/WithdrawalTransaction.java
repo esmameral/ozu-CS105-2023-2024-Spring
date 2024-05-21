@@ -8,8 +8,8 @@ public class WithdrawalTransaction extends Transaction{
 	}
 
 	@Override
-	public void updateAccount(BankAccount acc) {
-		//TODO  decrease balance
+	public void updateAccount(BankAccount acc) throws InsufficientBalanceException {
+		acc.descreaseBalance(getAmount());
 		
 	}
 

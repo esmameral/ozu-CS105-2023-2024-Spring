@@ -2,7 +2,7 @@ package com.ozu.model;
 
 import java.util.Date;
 
-public abstract class Transaction {
+public abstract class Transaction implements BankAccountUpdater{
 	private Date transactionDate;
 	private int id;
 	private double amount;
@@ -11,9 +11,10 @@ public abstract class Transaction {
 	public Transaction(double amount) {
 		super();
 		this.amount = amount;
+		this.transactionDate=new Date();
 	}
 
-	public abstract void updateAccount(BankAccount acc) ;
+	public abstract void updateAccount(BankAccount acc) throws InsufficientBalanceException ;
 	
 	public Date getTransactionDate() {
 		return transactionDate;
@@ -36,7 +37,13 @@ public abstract class Transaction {
 
 	@Override
 	public String toString() {
-		return "Transaction [transactionDate=" + transactionDate + ", id=" + id + ", amount=" + amount + "]";
+		return getClass().getSimpleName()+" [transactionDate=" + transactionDate + ", id=" + id + ", amount=" + amount + "]";
+	}
+
+	@Override
+	public Date getDate() {
+		return transactionDate;
+		
 	}
 	
 	

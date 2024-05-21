@@ -5,8 +5,8 @@ public class DepositTransaction extends Transaction{
     	super(amount);
     }
 	@Override
-	public void updateAccount(BankAccount acc) {
-		//TODO  increase balance
+	public void updateAccount(BankAccount acc)  {
+		acc.increaseBalance(getAmount());
 		
 		
 	}
