@@ -8,11 +8,20 @@ public class BankAccount {
 	private String owner;
 	private double balance;
 	private int accountNumber;
-	private String phoneNumber;
-	private String email;
+	private ContactInfo contact = new ContactInfo();
 	
 	//private Transaction[] transactions=new Transaction[20];
 	private ArrayList<Transaction> transactions=new ArrayList<Transaction>();
+	
+	public void printAllTransactions() {
+		//must print only transactions
+
+	}
+	
+    public void printBankAccountHistory() {
+		//must print everything. transactions, owner change, contact change
+    	
+	}
 	
 	public static void printInfo() {
 		currencyRate=32;
@@ -92,7 +101,8 @@ public class BankAccount {
 	
 	
 	public String toString() {
-		return owner+ "'s "+balance+ " "+getClass().getSimpleName();
+		return getClass().getSimpleName()+"["+owner+ "'s "+balance+ "] "+
+				contact.toString();
 	}
 	public static double getCurrencyRate() {
 		return currencyRate;
@@ -101,10 +111,10 @@ public class BankAccount {
 		BankAccount.currencyRate = currencyRate;
 	}
 
-	public void post(BankAccountUpdater change) throws InsufficientBalanceException {
-		change.updateAccount(this);
-		if(change instanceof Transaction)
-			transactions.add((Transaction)change);
+	public void post(BankAccountUpdater anUpdate) throws InsufficientBalanceException {
+		anUpdate.updateAccount(this);
+		if(anUpdate.isTransaction())
+			transactions.add((Transaction)anUpdate);
 	}
 		
 		
@@ -118,24 +128,20 @@ public class BankAccount {
 	}
 
 
-	public String getPhoneNumber() {
-		return phoneNumber;
+	public ContactInfo getContact() {
+		return contact;
 	}
 
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setContact(ContactInfo contact) {
+		this.contact = contact;
 	}
 
 
-	public String getEmail() {
-		return email;
-	}
+	
 
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	
 	
 	
 	

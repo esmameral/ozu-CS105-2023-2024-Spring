@@ -6,5 +6,6 @@ public interface BankAccountUpdater {
 	
 	public void updateAccount(BankAccount acc) throws InsufficientBalanceException ;
     public Date getDate();
+    public boolean isTransaction();
 
 }

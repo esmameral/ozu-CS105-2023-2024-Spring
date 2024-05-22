@@ -8,6 +8,7 @@ public abstract class Transaction implements BankAccountUpdater{
 	private double amount;
 	
 	
+	
 	public Transaction(double amount) {
 		super();
 		this.amount = amount;
@@ -44,6 +45,11 @@ public abstract class Transaction implements BankAccountUpdater{
 	public Date getDate() {
 		return transactionDate;
 		
+	}
+
+	@Override
+	public boolean isTransaction() {
+		return true;
 	}
 	
 	
